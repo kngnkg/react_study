@@ -2,12 +2,12 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import ColorfulMessage from "./components/ColorfulMessage";
+import { ColorfulMessage } from "./components/ColorfulMessage";
 
 const App = () => {
-    console.log("最初")
+    console.log("最初");
     const [num, setNum] = useState(0);
-    const [faceShowFlag, setFaceShowFlag] = useState(false)
+    const [faceShowFlag, setFaceShowFlag] = useState(false);
 
     const onClickCountup = () => {
         setNum(num + 1);
@@ -28,7 +28,6 @@ const App = () => {
         // 左側がtrueの場合のみ右側を実行
         faceShowFlag && setFaceShowFlag(false);
     }, [num]);
-    
 
     return (
         <>
